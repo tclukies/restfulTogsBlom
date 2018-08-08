@@ -124,13 +124,11 @@ app.delete("/blogs/:id", function(req, res) {
 
 //api routes
 app.get("/api", function(req, res) {
-    Blog.findById(req.params.id, function(err, foundBlog) {
+    Blog.find({}, function(err, blogs) {
         if (err) {
-            res.redirect("/blogs");
+            console.log(err);
         } else {
-            blog => {
-                res.json({ blog });
-            };
+            res.json({ blogs: blogs });
         }
     });
 });
