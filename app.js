@@ -8,7 +8,7 @@ const expressSanitizer = require("express-sanitizer");
 console.log(expressSanitizer);
 
 //APP Config
-// mongoose.connect("mongodb://localhost/restful_blog_app");
+
 mongoose.connect("mongodb://tom:password123@ds153841.mlab.com:53841/toms-blog");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -25,18 +25,6 @@ var blogSchema = new mongoose.Schema({
 });
 
 var Blog = mongoose.model("Blog", blogSchema);
-
-//RESTful Routes
-// Blog.create({
-//   title: "Test Blog",
-//   image:
-//     "https://cdn.cnn.com/cnnnext/dam/assets/170407220916-04-iconic-mountains-matterhorn-restricted.jpg",
-//   body: "Hello this is a Blog Post"
-// });
-
-// app.get("/", function(req, res) {
-//   res.redirect("/blogs");
-// });
 
 app.get("/", function(req, res) {
     res.render("home");
