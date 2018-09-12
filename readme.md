@@ -1,7 +1,7 @@
 ### Togs Blom!
 
 ### Deployed Link
-    -https://evening-refuge-41529.herokuapp.com/
+    https://togsblom.herokuapp.com/
 
 ### Tech 
 Express, Knex, MongoDB, EJS, Heroku
